@@ -5,3 +5,8 @@
 {{ post.author }}
 
 {{ post.created_date }}
+
+<form action="{% url 'post_delete' pk=post.pk %}" method="post">
+    {% csrf_token %}
+    포스트 삭제<input type="submit">
+</form>
