@@ -6,7 +6,7 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from django.utils import timezone
 
-from .forms import PostForm
+
 from .models import Post
 
 
@@ -40,4 +40,4 @@ def post_delete(request,pk):
         post.delete()
         return redirect('post_list')
     else:
-        return render(request,'post/post_list.html')
+        return redirect('post_list')
