@@ -1,6 +1,7 @@
 <form action="{% url 'post_create' %}" method="post">
     {% csrf_token %}
-    {{ form }}
+    제목<input type="text" name="title">
+    내용 <input type="text" name="text">
     <button>제출</button>
 
 
